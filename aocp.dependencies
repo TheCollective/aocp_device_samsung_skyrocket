@@ -10,6 +10,10 @@
   {
     "repository": "proprietary_vendor_aries-common",
     "target_path": "vendor/samsung/aries-common"
+  },
+  {
+    "repository": "proprietary_vendor_infuse4g",
+    "target_path": "vendor/samsung/infuse4g"
   }
 ]
 
