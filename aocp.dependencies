@@ -8,10 +8,6 @@
     "target_path": "device/samsung/msm8660-common"
   },
   {
-    "repository": "aocp_device_samsung_skyrocket",
-    "target_path": "device/samsung/skyrocket"
-  },
-  {
     "repository": "proprietary_vendor_skyrocket",
     "target_path": "vendor/samsung/skyrocket"
   }
