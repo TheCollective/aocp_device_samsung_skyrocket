@@ -12,12 +12,12 @@
     "target_path": "device/samsung/celox-common"
   },
   {
-    "repository": "android_kernel_samsung_msm8660-common",
-    "target_path": "kernel/samsung/msm8660-common"
-  },
-  {
     "repository": "proprietary_vendor_skyrocket",
     "target_path": "vendor/samsung/skyrocket"
+  },
+  {
+    "repository": "android_kernel_samsung_msm8660-common",
+    "target_path": "kernel/samsung/msm8660-common"
   }
 ]
 
