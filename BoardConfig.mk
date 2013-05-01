@@ -55,5 +55,33 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 838860800
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 20044333056
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/skyrocket/bluetooth
+BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
+BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk0p28
+BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
+BOARD_USES_MMCUTILS := true
+BOARD_HAS_NO_MISC_PARTITION := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+
+# Suppress the WIPE command since it can brick our EMMC
+BOARD_SUPPRESS_EMMC_WIPE := true
+
+# FIXME: Overlay has an issue on Quincy when playing video in landscape mode
+COMMON_GLOBAL_CFLAGS += -DQCOM_ROTATOR_KERNEL_FORMATS
+
+# Workaround for glitches while cropping bypass layers
+TARGET_NO_BYPASS_CROPPING := true
+
+# MTP
+BOARD_MTP_DEVICE := "/dev/mtp_usb"
+
+# Audio
+TARGET_USES_QCOM_LPA := true
+COMMON_GLOBAL_CFLAGS += -DWITH_QCOM_LPA
+BOARD_HAS_SAMSUNG_VOLUME_BUG := true
+
+# Disable initlogo, Samsungs framebuffer is weird
+TARGET_NO_INITLOGO := true
+
+# Preload the boot animation to avoid jerkiness
+TARGET_BOOTANIMATION_PRELOAD := true
 
